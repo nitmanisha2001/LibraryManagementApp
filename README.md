@@ -69,13 +69,13 @@ A production-ready **RESTful API** for a Library Management system built with **
 
 ```mermaid
 erDiagram
-    USER ||--o{ LOAN : "borrows"
-    BOOK ||--o{ LOAN : "loaned"
+    USER ||--o{ LOAN : borrows
+    BOOK ||--o{ LOAN : loaned
 
     USER {
         int id PK
         string name
-        string email UNIQUE
+        string email
         datetime created_at
         datetime updated_at
     }
@@ -84,7 +84,7 @@ erDiagram
         int id PK
         string title
         string author
-        string isbn UNIQUE
+        string isbn
         int total_copies
         int available_copies
         datetime created_at
@@ -93,12 +93,12 @@ erDiagram
 
     LOAN {
         int id PK
-        int user_id FK
-        int book_id FK
+        int user_id
+        int book_id
         date loan_date
         date due_date
-        date return_date NULL
-        string status  // ACTIVE | RETURNED | OVERDUE
+        date return_date
+        string status
         datetime created_at
         datetime updated_at
     }
@@ -449,4 +449,3 @@ This project is licensed under the **MIT License**. See `LICENSE` for details.
 
 > Maintainer: *Your Name*  
 > Contact: your.email@example.com
-
