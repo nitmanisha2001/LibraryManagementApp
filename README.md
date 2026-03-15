@@ -440,12 +440,3 @@ volumes:
 - ⬜ Background job for marking overdue loans
 - ⬜ CI pipeline (lint, test, build)
 
----
-
-## License
-This project is licensed under the **MIT License**. See `LICENSE` for details.
-
----
-
-> Maintainer: *Your Name*  
-> Contact: your.email@example.com
